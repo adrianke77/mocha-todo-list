@@ -27,6 +27,7 @@ Once you spin up your local server, look below at the cURL commands with the exp
 curl -XGET http://localhost:3000/todos
 
 ```
+<<<<<<< HEAD
 
   - Example Response
   ```json
@@ -40,6 +41,29 @@ curl -XGET http://localhost:3000/todos
 ```bash
 curl -XGET http://localhost:3000/todos/1234
 
+=======
+GET /todos
+  ✓ should return a 200 response
+  ✓ should return an array
+  ✓ should return all the records in the database
+
+GET /todos/:id
+  ✓ should return a 200 response
+  ✓ should return an object containing the fields 'name', 'description' and 'completed'
+
+POST /todos
+  ✓ should return a 200 response
+  ✓ should return a 422 response if the field name is wrong
+  ✓ should return an error message if the name field is wrong
+  ✓ should add a new todo to the database
+
+PUT /todos/:id
+  ✓ should return a 200 response
+  ✓ should update a todo document
+
+DELETE /todos/:id
+  ✓ should remove a todo document
+>>>>>>> 3a291bb557c9aba3ddabe5fef981be5474aa740c
 ```
 
   - Expected Response
@@ -48,10 +72,16 @@ curl -XGET http://localhost:3000/todos/1234
   ```
 ---
 
+<<<<<<< HEAD
 `Create` cURL Request
 
 ```bash
 curl -XPOST -H "Content-Type: application/json" -d '{"name":"Buy Cake","description":"you can never have too much"}' http://localhost:3000/todos
+=======
+**Bonus:**
+- Add more validations in the models and add the tests for them, too
+- Add fields with different datatypes and write tests for them
+>>>>>>> 3a291bb557c9aba3ddabe5fef981be5474aa740c
 
 ```
 
@@ -95,6 +125,7 @@ Another `Index` Request
 curl -XGET http://localhost:3000/todos
 ```
 
+<<<<<<< HEAD
   - Expected Response
 
   ```json
@@ -147,3 +178,8 @@ curl -XGET http://localhost:3000/todos
 ## Licensing
 1. All content is licensed under a CC-BY-NC-SA 4.0 license.
 2. All software code is licensed under GNU GPLv3. For commercial use or alternative licensing, please contact legal@ga.co.
+=======
+- [Chai](http://chaijs.com/)
+- [Mocha](https://mochajs.org/)
+- [Mongoose Validations](http://mongoosejs.com/docs/validation.html)
+>>>>>>> 3a291bb557c9aba3ddabe5fef981be5474aa740c
